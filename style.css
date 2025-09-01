@@ -269,15 +269,40 @@ body {
     font-size: 0.8rem;
 }
 
+.project-links {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
 .project-link {
     color: #2563eb;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border: 2px solid #2563eb;
+    border-radius: 25px;
+    transition: all 0.3s;
+    font-size: 0.9rem;
 }
 
 .project-link:hover {
-    color: #1d4ed8;
+    background: #2563eb;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.play-btn {
+    background: #10b981;
+    border-color: #10b981;
+    color: white;
+}
+
+.play-btn:hover {
+    background: #059669;
+    border-color: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
 }
 
 /* Contact Section */
