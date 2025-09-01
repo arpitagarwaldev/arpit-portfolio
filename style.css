@@ -385,6 +385,52 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* Research Focus Section */
+.research-focus {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 2px solid #e2e8f0;
+}
+
+.research-focus h3 {
+    color: #2563eb;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.research-item {
+    background: rgba(37, 99, 235, 0.05);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid #2563eb;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.research-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+}
+
+.research-item h4 {
+    color: #2563eb;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.research-item p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
