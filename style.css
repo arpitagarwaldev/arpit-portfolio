@@ -162,8 +162,17 @@ body {
 
 .about-content {
     display: grid;
-    grid-template-columns: 300px 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 3rem;
+    align-items: center;
+    text-align: center;
+}
+
+.about-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
     align-items: start;
 }
 
@@ -490,7 +499,7 @@ body {
         align-items: center;
     }
     
-    .about-content,
+    .about-main,
     .contact-content {
         grid-template-columns: 1fr;
     }
@@ -498,7 +507,7 @@ body {
     .profile-photo {
         width: 200px;
         height: 200px;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
     
     .project-grid {
