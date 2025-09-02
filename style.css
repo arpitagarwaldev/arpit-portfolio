@@ -140,18 +140,20 @@ body {
 }
 
 .about-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
-    gap: 3rem;
+}
+
+.about-top-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
 }
 
 .about-description {
-    max-width: 800px;
-    text-align: center;
+    text-align: left;
 }
 
 .about-description p {
@@ -515,10 +517,19 @@ body {
         align-items: center;
     }
     
+    .about-top-section,
     .achievements-skills-container,
     .contact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    .about-image {
+        text-align: center;
+    }
+    
+    .about-description {
+        text-align: center;
     }
     
     .achievements-section,
