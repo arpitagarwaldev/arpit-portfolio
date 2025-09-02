@@ -144,12 +144,22 @@ body {
     margin: 0 auto;
 }
 
-.about-top-section {
+.about-main-container {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
-    margin-bottom: 4rem;
+    align-items: start;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-image {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .about-description {
@@ -161,14 +171,6 @@ body {
     line-height: 1.8;
     margin-bottom: 1.5rem;
     color: #64748b;
-}
-
-.achievements-skills-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    width: 100%;
-    align-items: start;
 }
 
 .achievements-section {
@@ -517,8 +519,7 @@ body {
         align-items: center;
     }
     
-    .about-top-section,
-    .achievements-skills-container,
+    .about-main-container,
     .contact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
