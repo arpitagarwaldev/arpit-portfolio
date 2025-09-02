@@ -161,27 +161,32 @@ body {
     color: #64748b;
 }
 
-.achievements-section {
+.achievements-skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
     width: 100%;
-    text-align: center;
-    margin-bottom: 2rem;
+    align-items: start;
+}
+
+.achievements-section {
+    text-align: left;
 }
 
 .achievements-section h3 {
     color: #2563eb;
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
+    text-align: center;
 }
 
 .achievements-list {
     list-style: none;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
+    padding: 0;
 }
 
 .achievements-list li {
-    padding: 0.5rem 0;
+    padding: 0.8rem 0;
     color: #64748b;
     font-size: 1rem;
     border-bottom: 1px solid #e2e8f0;
@@ -192,14 +197,14 @@ body {
 }
 
 .skills-section {
-    width: 100%;
-    text-align: center;
+    text-align: right;
 }
 
 .skills-section h3 {
     color: #2563eb;
     margin-bottom: 2rem;
     font-size: 1.8rem;
+    text-align: center;
 }
 
 .about-image {
@@ -249,10 +254,8 @@ body {
 .skill-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.8rem;
-    max-width: 1000px;
-    margin: 0 auto;
+    justify-content: flex-end;
+    gap: 0.6rem;
 }
 
 .skill-tag {
@@ -512,9 +515,19 @@ body {
         align-items: center;
     }
     
-    .about-main,
+    .achievements-skills-container,
     .contact-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .achievements-section,
+    .skills-section {
+        text-align: center;
+    }
+    
+    .skill-grid {
+        justify-content: center;
     }
     
     .profile-photo {
