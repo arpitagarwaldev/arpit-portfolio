@@ -273,6 +273,16 @@ body {
     text-align: center;
     white-space: nowrap;
     flex-shrink: 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-tag:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+    color: white;
 }
 
 /* Projects Section */
