@@ -598,31 +598,84 @@ body {
 
 /* Profile Card */
 .profile-card {
-    background: white;
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: var(--shadow);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 2px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 2.5rem;
     text-align: center;
-    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    opacity: 0.1;
+    z-index: 0;
 }
 
 .profile-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(59, 130, 246, 0.2);
+    border-color: #3b82f6;
+}
+
+.profile-card:hover::before {
+    opacity: 0.15;
+}
+
+
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .profile-avatar {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
-    background: var(--gradient);
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.5rem;
     font-size: 3rem;
     color: white;
     overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+    border: 4px solid white;
+    z-index: 5;
+}
+
+.profile-avatar::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
+    border-radius: 50%;
+    z-index: -1;
+    animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .profile-image {
@@ -633,8 +686,21 @@ body {
 }
 
 .profile-info h3 {
-    color: var(--primary-color);
+    color: #1e40af;
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 5;
+}
+
+.profile-info p {
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    position: relative;
+    z-index: 5;
 }
 
 .profile-badges {
@@ -646,11 +712,22 @@ body {
 }
 
 .badge {
-    background: var(--accent-color);
+    background: linear-gradient(45deg, rgba(96, 165, 250, 0.8), rgba(59, 130, 246, 0.9));
     color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
+    padding: 6px 16px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(96, 165, 250, 0.5);
+    background: linear-gradient(45deg, rgba(96, 165, 250, 1), rgba(59, 130, 246, 1));
 }
 
 /* Sections */

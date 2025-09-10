@@ -202,3 +202,66 @@ window.addEventListener('load', () => {
         }, 500);
     }
 });
+
+// Business card download function
+function downloadBusinessCard() {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    canvas.width = 1050;
+    canvas.height = 600;
+    
+    const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+    gradient.addColorStop(0, '#1e40af');
+    gradient.addColorStop(0.5, '#3b82f6');
+    gradient.addColorStop(1, '#8b5cf6');
+    
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 52px Arial, sans-serif';
+    ctx.fillText('ARPIT AGARWAL', 50, 100);
+    
+    ctx.font = '28px Arial, sans-serif';
+    ctx.fillText('Senior AI Engineer', 50, 140);
+    
+    ctx.font = '22px Arial, sans-serif';
+    ctx.fillText('Denver, Colorado, USA', 50, 180);
+    
+    // Contact section
+    ctx.font = 'bold 20px Arial, sans-serif';
+    ctx.fillText('CONTACT', 50, 240);
+    
+    ctx.font = '18px Arial, sans-serif';
+    ctx.fillText('Phone: +1 (720) 710-6105', 50, 270);
+    ctx.fillText('Email: arpit.dev@outlook.com', 50, 300);
+    
+    // Professional links
+    ctx.font = 'bold 20px Arial, sans-serif';
+    ctx.fillText('PROFESSIONAL LINKS', 50, 360);
+    
+    ctx.font = '18px Arial, sans-serif';
+    ctx.fillText('LinkedIn: linkedin.com/in/arpitagarwaldev', 50, 390);
+    ctx.fillText('GitHub: github.com/arpitagarwaldev', 50, 420);
+    
+    // Expertise
+    ctx.font = 'bold 20px Arial, sans-serif';
+    ctx.fillText('EXPERTISE', 50, 480);
+    
+    ctx.font = '16px Arial, sans-serif';
+    ctx.fillText('• 3 US Patents in AI & 5G Networks', 50, 510);
+    ctx.fillText('• Agentic AI Systems & LLM Fine-tuning', 50, 535);
+    ctx.fillText('• Machine Learning & Data Science', 50, 560);
+    
+    canvas.toBlob((blob) => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Arpit_Agarwal_Business_Card.png';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    });
+}
