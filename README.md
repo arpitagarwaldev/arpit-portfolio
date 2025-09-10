@@ -78,6 +78,13 @@ Interactive treasure hunting adventure game
 - **Live Demo** available for immediate play
 - **Open Source** game development showcase
 
+### [🐍 Python AI Tutorials](https://github.com/arpitagarwaldev/python-ai-tutorials)
+Comprehensive Python scripts and tutorials for AI/ML development
+- **LLM Integration Scripts** with OpenAI and Hugging Face APIs
+- **Data Science Workflows** using Pandas, NumPy, and Scikit-learn
+- **Machine Learning Pipelines** with PyTorch and TensorFlow
+- **Production Ready** Python applications and automation tools
+
 ### [🌐 Professional Portfolio](https://github.com/arpitagarwaldev/arpit-portfolio)
 AI-themed portfolio with neural network animations
 - **Animated Neural Background** with growing connections
